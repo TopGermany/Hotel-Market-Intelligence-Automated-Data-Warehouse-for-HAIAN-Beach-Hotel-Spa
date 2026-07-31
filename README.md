@@ -6,15 +6,15 @@
 
 ## 📑 Mục lục
 
-1. [📖 Tổng quan dự án](#-1-tổng-quan-dự-án)
-2. [❕ Vấn đề doanh nghiệp](#-2-vấn-đề-doanh-nghiệp)
-3. [❔ Câu hỏi phân tích](#-3-câu-hỏi-phân-tích)
-4. [✅ Kết quả phân tích nổi bật](#-4-kết-quả-phân-tích-nổi-bật)
-5. [🏭 Kiến trúc end-to-end](#-5-kiến-trúc-end-to-end)
-6. [📝 Mô hình dữ liệu và Pipeline tự động](#-6-mô-hình-dữ-liệu)
-7. [📊 Hệ thống Dashboard phân tích](#-7-hệ-thống-dashboard-phân-tích-looker-studio)
-8. [🎯 Đề xuất kinh doanh](#-8-đề-xuất-kinh-doanh-actionable-insights)
-9. [🎓 Những kiến thức và kinh nghiệm đạt được](#-9-mình-đã-học-được-gì-qua-dự-án-)
+- 1. [📖 Tổng quan dự án](#-1-tổng-quan-dự-án)
+- 2. [❕ Vấn đề doanh nghiệp](#-2-vấn-đề-doanh-nghiệp)
+- 3. [❔ Câu hỏi phân tích](#-3-câu-hỏi-phân-tích)
+- 4. [✅ Kết quả phân tích nổi bật](#-4-kết-quả-phân-tích-nổi-bật)
+- 5. [🏭 Kiến trúc end-to-end](#-5-kiến-trúc-end-to-end)
+- 6. [📝 Mô hình dữ liệu và Pipeline tự động](#-6-mô-hình-dữ-liệu)
+- 7. [📊 Hệ thống Dashboard phân tích](#-7-hệ-thống-dashboard-phân-tích-looker-studio)
+- 8. [🎯 Đề xuất kinh doanh](#-8-đề-xuất-kinh-doanh-actionable-insights)
+- 9. [🎓 Những kiến thức và kinh nghiệm đạt được](#-9-mình-đã-học-được-gì-qua-dự-án-)
 
 
 ## 📖 1. Tổng quan dự án
