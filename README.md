@@ -61,8 +61,6 @@ Lớp BI được thiết kế như một Revenue Command Center thay vì tập 
 - **Chi phí và lợi nhuận:** Contribution Profit, Net Profit, CostPAR, biến động chi phí và profit bridge.
 - **Trải nghiệm khách và độ tin cậy dữ liệu:** rating, nhóm phàn nàn, độ mới dữ liệu, dòng bị loại, dữ liệu trùng và độ bao phủ.
 
-Định nghĩa KPI và hướng dẫn dựng dashboard nằm trong [docs/LOOKER_STUDIO_DASHBOARD.vi.md](docs/LOOKER_STUDIO_DASHBOARD.vi.md). Tư duy phân tích và thiết kế lại dashboard nằm trong [docs/DASHBOARD_REDESIGN_V2.vi.md](docs/DASHBOARD_REDESIGN_V2.vi.md).
-
 ## Định nghĩa KPI
 
 Các KPI khách sạn được tính có trọng số tại cấp độ báo cáo được chọn:
@@ -79,47 +77,8 @@ Cách tính này tránh hai lỗi BI phổ biến: lấy trung bình các tỷ l
 
 ## Kiến trúc end-to-end
 
-```mermaid
-flowchart LR
-    subgraph Sources["Nguồn dữ liệu"]
-        Internal["CSV vận hành khách sạn<br/>booking · doanh thu · tồn phòng<br/>chi phí · đánh giá"]
-        Booking["Booking.com"]
-        IVIVU["iVIVU"]
-    end
+<img width="882" height="505" alt="Screenshot 2026-07-28 220616" src="https://github.com/user-attachments/assets/9aae5f6f-2416-4bd9-93a8-5ed08202ecc7" />
 
-    subgraph Bronze["Bronze · dữ liệu thô theo từng lần chạy"]
-        Raw["OTA JSONL bất biến"]
-    end
-
-    subgraph Quality["Chuẩn hóa và kiểm soát"]
-        Conform["Chuẩn hóa · mapping · loại trùng"]
-        DQ["Kiểm tra cấp dòng và business rule"]
-        Reject["Quarantine"]
-        Audit["Audit lần chạy"]
-    end
-
-    subgraph Warehouse["BigQuery"]
-        Stage["Staging"]
-        Silver["Dimension và fact"]
-        Gold["4 analytical view"]
-    end
-
-    BI["Looker Studio / CSV export"]
-
-    Booking --> Raw
-    IVIVU --> Raw
-    Raw --> Conform
-    Internal --> DQ
-    Conform --> DQ
-    DQ -->|hợp lệ| Stage
-    DQ -->|vi phạm| Reject
-    DQ --> Audit
-    Stage -->|MERGE| Silver
-    Silver --> Gold
-    Gold --> BI
-```
-
-Luồng production hoạt động theo quy trình deterministic và không phụ thuộc vào LLM. AI Agent là lớp hỗ trợ vận hành tùy chọn, không thay thế scheduler hoặc nguồn sự thật kỹ thuật.
 
 ## Mô hình dữ liệu
 
@@ -129,29 +88,15 @@ Data Warehouse sử dụng dimensional modeling với grain, primary key, foreig
 - **Fact:** booking, tồn phòng, chi phí phòng, doanh thu phòng, chi phí phân phối, đánh giá khách và giá phòng đối thủ.
 - **Gold view:** phân tích chi phí ngày, ProfitPAR ngày, tổng hợp giá đối thủ và so sánh giá HAIAN với thị trường.
 
-![ERD Data Warehouse HAIAN](output/erd-haian-dwh.png)
+<img width="1237" height="695" alt="image" src="https://github.com/user-attachments/assets/436be9e5-48ea-4125-9681-263a04a7220f" />
 
-ERD, grain, khóa và data dictionary đầy đủ nằm trong [docs/data-model.vi.md](docs/data-model.vi.md). Schema thực thi nằm trong [agents/bq_schemas.py](agents/bq_schemas.py).
 
 ## Pipeline tự động
 
 Airflow DAG chạy hằng ngày lúc **02:00 theo múi giờ Asia/Ho_Chi_Minh**. Hai tác vụ thu thập Booking.com và iVIVU chạy song song trước khi hợp nhất thành một bộ dữ liệu canonical.
 
-```mermaid
-flowchart LR
-    A["Kiểm tra cấu hình"] --> B["Kiểm tra BigQuery"]
-    B --> C["Cập nhật schema"]
-    C --> D["Thu thập Booking"]
-    C --> E["Thu thập iVIVU"]
-    D --> F["Hợp nhất"]
-    E --> F
-    F --> G["Kiểm tra toàn bộ nguồn"]
-    G --> H["Đồng bộ dimension"]
-    H --> I["Đồng bộ fact"]
-    I --> J["Đồng bộ summary"]
-    J --> K["Làm mới data mart"]
-    K --> L["Hoàn thành"]
-```
+<img width="1593" height="2048" alt="0" src="https://github.com/user-attachments/assets/e608667b-02bf-4365-b01d-4df9e83e31e9" />
+
 
 Các cơ chế kỹ thuật chính:
 
@@ -163,18 +108,6 @@ Các cơ chế kỹ thuật chính:
 - audit theo từng lần chạy, bao gồm trạng thái stage và số dòng;
 - Airflow LocalExecutor và PostgreSQL chạy bằng Docker, có healthcheck và init service;
 - GitHub Actions kiểm tra compile, Ruff, pytest/coverage, Docker Compose và image build.
-
-## Ví dụ kiểm tra chất lượng dữ liệu
-
-Kết quả QA đi kèm dự án cho thấy:
-
-- 8.248 booking có khóa duy nhất;
-- không có overbooking theo loại phòng và ngày lưu trú;
-- ngày check-out của booking đã xác nhận luôn sau ngày check-in;
-- không có gross booking revenue âm;
-- toàn bộ room-night nội bộ thuộc giai đoạn phân tích tháng 6–8/2025.
-
-Logic kiểm tra nằm trong [agents/data_quality.py](agents/data_quality.py). Kết quả từng lần chạy được ghi vào `Data/Quarantine/<run_id>/` và `Data/Audit/<run_id>/`.
 
 ## Cấu trúc repository
 
