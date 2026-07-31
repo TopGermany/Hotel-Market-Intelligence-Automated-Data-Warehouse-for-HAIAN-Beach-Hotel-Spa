@@ -112,6 +112,7 @@ Dashboard cung cấp góc nhìn tổng quát về kết quả kinh doanh phòng 
 ### 📈 7.2. Dashboard Phân tích nhu cầu và doanh thu
 <!-- 📸 THÊM ẢNH PROFITABILITY DASHBOARD VÀO DÒNG BÊN DƯỚI -->
 <img width="1411" height="792" alt="image" src="https://github.com/user-attachments/assets/7b3f82c6-43b4-4e24-a122-03079beeb9dc" />
+
 #### Tác dụng
 
 Dashboard phân tích nguồn hình thành doanh thu và lợi nhuận theo ba chiều chính gồm loại phòng, phân khúc khách hàng và kênh bán. Qua đó, nhà quản lý có thể xác định sản phẩm, nhóm khách và kênh phân phối đóng góp nhiều nhất vào kết quả kinh doanh.
