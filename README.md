@@ -4,6 +4,32 @@
 ![Tech Stack](https://img.shields.io/badge/Stack-Python%20%7C%20Airflow%20%7C%20BigQuery-success)
 ![Data Analyst](https://img.shields.io/badge/Role-Data%20Analyst%20%2B%20Data%20Engineer-orange)
 
+## 📑 Mục lục
+
+1. [📖 Tổng quan dự án](#-1-tổng-quan-dự-án)
+2. [❕ Vấn đề doanh nghiệp](#-2-vấn-đề-doanh-nghiệp)
+3. [❔ Câu hỏi phân tích](#-3-câu-hỏi-phân-tích)
+4. [✅ Kết quả phân tích nổi bật](#-4-kết-quả-phân-tích-nổi-bật)
+5. [🏭 Kiến trúc end-to-end](#-5-kiến-trúc-end-to-end)
+6. [📝 Mô hình dữ liệu và Pipeline tự động](#-6-mô-hình-dữ-liệu)
+   - [Mô hình dữ liệu](#-6-mô-hình-dữ-liệu)
+   - [Pipeline tự động](#-6-pipeline-tự-động)
+7. [📊 Hệ thống Dashboard phân tích](#-7-hệ-thống-dashboard-phân-tích-looker-studio)
+   - [7.1. Tổng quan hiệu quả kinh doanh](#-71-dashboard-tổng-quan-hiệu-quả-kinh-doanh)
+   - [7.2. Phân tích nhu cầu và doanh thu](#-72-dashboard-phân-tích-nhu-cầu-và-doanh-thu)
+   - [7.3. Phân tích thị trường và giá đối thủ](#-73-dashboard-phân-tích-thị-trường-và-giá-đối-thủ)
+   - [7.4. Phân tích lợi nhuận và kiểm soát chi phí](#74--dashboard-phân-tích-lợi-nhuận-và-kiểm-soát-chi-phí)
+8. [🎯 Đề xuất kinh doanh](#-8-đề-xuất-kinh-doanh-actionable-insights)
+   - [8.1. Điều chỉnh giá theo mức cầu](#81-điều-chỉnh-giá-theo-mức-cầu)
+   - [8.2. Tập trung vào loại phòng có đóng góp cao](#82-tập-trung-vào-loại-phòng-có-đóng-góp-cao)
+   - [8.3. Phát triển phân khúc khách hàng chủ lực](#83-phát-triển-phân-khúc-khách-hàng-chủ-lực)
+   - [8.4. Tối ưu cơ cấu kênh bán](#84-tối-ưu-cơ-cấu-kênh-bán)
+   - [8.5. Kiểm soát các nhóm chi phí lớn](#85-kiểm-soát-các-nhóm-chi-phí-lớn)
+   - [8.6. Sử dụng giá đối thủ như tín hiệu thị trường](#86-sử-dụng-giá-đối-thủ-như-tín-hiệu-thị-trường)
+   - [8.7. Chuyển từ quản lý doanh thu sang quản lý lợi nhuận](#87-chuyển-từ-quản-lý-doanh-thu-sang-quản-lý-lợi-nhuận)
+9. [🎓 Những kiến thức và kinh nghiệm đạt được](#-9-mình-đã-học-được-gì-qua-dự-án-)
+
+
 ## 📖 1. Tổng quan dự án
 
 Đây là dự án Data Analytics kết hợp Data Engineering end-to-end dành cho bài toán quản trị doanh thu tại **HAIAN Beach Hotel & Spa**. Dự án tích hợp dữ liệu vận hành nội bộ—bao gồm booking, doanh thu, tồn phòng, chi phí và đánh giá khách hàng—với dữ liệu giá phòng đối thủ được thu thập từ Booking.com và iVIVU.
