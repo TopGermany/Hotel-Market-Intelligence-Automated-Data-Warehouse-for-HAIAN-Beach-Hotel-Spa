@@ -4,13 +4,13 @@
 ![Tech Stack](https://img.shields.io/badge/Stack-Python%20%7C%20Airflow%20%7C%20BigQuery-success)
 ![Data Analyst](https://img.shields.io/badge/Role-Data%20Analyst%20%2B%20Data%20Engineer-orange)
 
-## Tổng quan dự án
+## 📖 1. Tổng quan dự án
 
 Đây là dự án Data Analytics kết hợp Data Engineering end-to-end dành cho bài toán quản trị doanh thu tại **HAIAN Beach Hotel & Spa**. Dự án tích hợp dữ liệu vận hành nội bộ—bao gồm booking, doanh thu, tồn phòng, chi phí và đánh giá khách hàng—với dữ liệu giá phòng đối thủ được thu thập từ Booking.com và iVIVU.
 
 Ở góc độ **Data Analyst**, dự án tập trung xây dựng hệ thống KPI, phân tích các yếu tố ảnh hưởng đến lợi nhuận và thiết kế dashboard hỗ trợ Revenue Manager ra quyết định. Ở góc độ **Data Engineering**, toàn bộ dữ liệu được thu thập, kiểm tra chất lượng, mô hình hóa, nạp vào BigQuery và tự động hóa bằng Apache Airflow.
 
-## Vấn đề doanh nghiệp
+## ❕ 2. Vấn đề doanh nghiệp
 
 Từ tháng 6 đến tháng 8 năm 2025, chỉ số **ProfitPAR của HAIAN Beach Hotel & Spa chỉ đạt 550.000 VNĐ/phòng, thấp hơn mục tiêu 750.000 VNĐ/phòng**, cho thấy hiệu quả khai thác phòng và khả năng tối ưu lợi nhuận chưa đạt kỳ vọng.
 
@@ -18,7 +18,7 @@ Mặc dù khách sạn có thể duy trì công suất và doanh thu ở mức c
 
 Dự án vì vậy hướng tới xây dựng một nguồn dữ liệu tập trung và hệ thống phân tích có khả năng phân rã khoảng cách lợi nhuận, xác định các yếu tố tác động và hỗ trợ lựa chọn hành động phù hợp.
 
-## Câu hỏi phân tích
+## ❔ 3. Câu hỏi phân tích
 
 1. ProfitPAR, Net Profit, RevPAR, ADR và Occupancy biến động như thế nào trong giai đoạn tháng 6–8/2025?
 2. Khoảng cách giữa ProfitPAR thực tế và mục tiêu 750.000 VNĐ/phòng đến từ giá bán, công suất, cơ cấu phòng, cơ cấu kênh hay chi phí?
@@ -36,7 +36,7 @@ Dự án vì vậy hướng tới xây dựng một nguồn dữ liệu tập tr
 | Data pipeline | Thu thập và kiểm tra bằng Python, điều phối Airflow, incremental load vào BigQuery, quarantine và audit |
 | Bàn giao | Dữ liệu cho Looker Studio, Docker, automated test, CI, tài liệu kỹ thuật, báo cáo và slide thuyết trình |
 
-## Kết quả phân tích nổi bật
+## ✅ 4. Kết quả phân tích nổi bật
 
 Dữ liệu vận hành lịch sử được phân tích trong giai đoạn **tháng 6–8/2025**. Các KPI dạng tỷ lệ được tính theo tỷ lệ của tổng thay vì lấy trung bình cộng các tỷ lệ theo ngày.
 
@@ -51,36 +51,12 @@ Dữ liệu vận hành lịch sử được phân tích trong giai đoạn **th
 
 Các kết quả trên mô tả giai đoạn lịch sử đã phân tích, không phải kết luận quan hệ nhân quả hoặc kết quả của một thử nghiệm giá có đối chứng.
 
-## Luồng ra quyết định của dashboard
-
-Lớp BI được thiết kế như một Revenue Command Center thay vì tập hợp các biểu đồ rời rạc:
-
-- **Hiệu quả điều hành:** Net Revenue, Net Profit, ProfitPAR, Occupancy, ADR, Net RevPAR, chênh lệch mục tiêu và xu hướng.
-- **Chẩn đoán doanh thu:** heatmap theo ngày trong tuần, ma trận giá–công suất theo loại phòng, lợi nhuận theo kênh, booking window, tỷ lệ hủy và length of stay.
-- **Phân tích thị trường:** giá khách sạn cạnh tranh, tình trạng còn phòng, trung vị/khoảng giá và vị thế giá—chỉ hiển thị khi HAIAN và đối thủ có cùng ngày lưu trú và điều kiện giá có thể so sánh.
-- **Chi phí và lợi nhuận:** Contribution Profit, Net Profit, CostPAR, biến động chi phí và profit bridge.
-- **Trải nghiệm khách và độ tin cậy dữ liệu:** rating, nhóm phàn nàn, độ mới dữ liệu, dòng bị loại, dữ liệu trùng và độ bao phủ.
-
-## Định nghĩa KPI
-
-Các KPI khách sạn được tính có trọng số tại cấp độ báo cáo được chọn:
-
-```text
-Occupancy  = SUM(Rooms Sold) / SUM(Available Rooms)
-ADR        = SUM(Net Room Revenue) / SUM(Rooms Sold)
-Net RevPAR = SUM(Net Room Revenue) / SUM(Available Rooms)
-Net Profit = SUM(Net Room Revenue) - SUM(Operating Cost)
-ProfitPAR  = Net Profit / SUM(Available Rooms)
-```
-
-Cách tính này tránh hai lỗi BI phổ biến: lấy trung bình các tỷ lệ đã tính sẵn theo ngày và cộng ProfitPAR của nhiều ngày với nhau.
-
-## Kiến trúc end-to-end
+## 🏭 5. Kiến trúc end-to-end
 
 <img width="882" height="505" alt="Screenshot 2026-07-28 220616" src="https://github.com/user-attachments/assets/9aae5f6f-2416-4bd9-93a8-5ed08202ecc7" />
 
 
-## Mô hình dữ liệu
+## 📝 6. Mô hình dữ liệu
 
 Data Warehouse sử dụng dimensional modeling với grain, primary key, foreign-key validation và trường partition theo ngày được định nghĩa rõ ràng.
 
@@ -91,7 +67,7 @@ Data Warehouse sử dụng dimensional modeling với grain, primary key, foreig
 <img width="1237" height="695" alt="image" src="https://github.com/user-attachments/assets/436be9e5-48ea-4125-9681-263a04a7220f" />
 
 
-## Pipeline tự động
+## 🌊 6. Pipeline tự động
 
 Airflow DAG chạy hằng ngày lúc **02:00 theo múi giờ Asia/Ho_Chi_Minh**. Hai tác vụ thu thập Booking.com và iVIVU chạy song song trước khi hợp nhất thành một bộ dữ liệu canonical.
 
@@ -109,107 +85,36 @@ Các cơ chế kỹ thuật chính:
 - Airflow LocalExecutor và PostgreSQL chạy bằng Docker, có healthcheck và init service;
 - GitHub Actions kiểm tra compile, Ruff, pytest/coverage, Docker Compose và image build.
 
-## Cấu trúc repository
 
-```text
-.
-├── agents/                  # Schema BigQuery, ETL, DQ, data mart và pipeline CLI
-├── dags/                    # Airflow DAG gồm 12 task
-├── scrapers/                # Bộ thu thập Booking và iVIVU bằng Playwright
-├── Data/
-│   ├── Raw/                 # Dữ liệu nguồn và canonical CSV
-│   ├── Bronze/              # Dữ liệu OTA bất biến theo từng lần chạy
-│   ├── Quarantine/          # Dòng bị loại và mã lỗi
-│   ├── Audit/               # Kết quả audit pipeline và DQ
-│   └── Presentation/        # Dữ liệu xuất cho Looker Studio
-├── docs/                    # Mô hình dữ liệu, dashboard và tài liệu vận hành
-├── tests/                   # Unit test và contract test
-├── tools/                   # Tạo lịch, export, migration và local status UI
-├── .github/workflows/       # Continuous Integration
-├── docker-compose.yml
-└── HUONG_DAN_CHAY_PROJECT.md
-```
-
-## Hướng dẫn chạy dự án
-
-### Yêu cầu
-
-- Docker Desktop hoặc Docker Engine có Docker Compose
-- Google Cloud project đã bật BigQuery
-- BigQuery dataset, mặc định là `haian_dwh` tại `asia-southeast1`
-- service account có quyền chạy job và đọc/ghi dataset
-
-### Khởi động hệ thống
-
-```powershell
-Copy-Item .env.example .env
-Copy-Item C:\duong-dan\service-account.json secrets\gcp-service-account.json
-docker compose config --quiet
-docker compose up -d --build
-```
-
-Mở `http://localhost:8080`, đăng nhập bằng tài khoản đã cấu hình trong `.env`, bật DAG và trigger `haian_competitor_price_pipeline`.
-
-Không commit `.env` hoặc service-account key. Hướng dẫn đầy đủ, lệnh chạy từng stage và cách xử lý lỗi nằm trong [HUONG_DAN_CHAY_PROJECT.md](HUONG_DAN_CHAY_PROJECT.md).
-
-### Chạy kiểm tra
-
-```powershell
-py -3.10 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements-dev.txt
-python -m playwright install chromium
-
-python -m compileall -q agents dags scrapers tools tests
-ruff check agents dags scrapers tools tests
-pytest --cov --cov-report=term-missing
-```
-
-## Phạm vi và giới hạn dữ liệu
-
-Repository thể hiện một quy trình phân tích và dữ liệu end-to-end, không phải hệ thống production đang vận hành trực tiếp tại HAIAN.
-
-- Dữ liệu vận hành lịch sử bao phủ giai đoạn tháng 6–8/2025, trong khi dữ liệu OTA hiện tại chứa ngày lưu trú tương lai trong năm 2026.
-- Không được ghép ADR lịch sử của HAIAN với giá đối thủ tương lai như dữ liệu cùng kỳ. Price Index chỉ được tính khi có giá công khai của HAIAN và đối thủ cho cùng ngày lưu trú, loại phòng và điều kiện giá có thể so sánh.
-- Việc thu thập OTA phụ thuộc vào cấu trúc trang, điều kiện truy cập và điều khoản của nền tảng; selector cần được giám sát khi vận hành.
-- Test cục bộ, cấu trúc DAG và cấu hình container có thể được kiểm tra không cần cloud credential. Thu thập website và ghi BigQuery thực tế cần kết nối mạng cùng tài khoản GCP do người vận hành cung cấp.
-- Các đề xuất là giả thuyết phân tích. Tác động thương mại cần được xác nhận bằng thử nghiệm giá hoặc kênh bán có kiểm soát.
-
-## Kỹ năng thể hiện qua dự án
-
-**Data Analytics:** xác định bài toán kinh doanh, quản trị KPI, SQL/BigQuery, phân tích dữ liệu, dimensional modeling, thiết kế dashboard, đánh giá chất lượng dữ liệu, truyền đạt insight và xây dựng đề xuất có thể hành động.
-
-**Data Engineering:** Python ETL, thu thập dữ liệu bằng Playwright, điều phối Airflow, incremental load vào BigQuery, quarantine và audit, Docker, automated testing và CI.
----
-
-## 📊 8. Hệ thống Dashboard Phân tích (Looker Studio)
+## 📊 7. Hệ thống Dashboard Phân tích (Looker Studio)
 
 Để chuyển đổi dữ liệu thô thành những thông tin chi tiết có giá trị hành động, tôi đã thiết kế 3 Dashboard Quản trị kết nối trực tiếp với các Data Marts trên BigQuery.
 
-### 💰 8.1. Dashboard Quản trị Doanh thu (Revenue Management)
+### 💰 7.1. Dashboard Quản trị Doanh thu 
 <!-- 📸 THÊM ẢNH REVENUE DASHBOARD VÀO DÒNG BÊN DƯỚI -->
 <img width="1153" height="691" alt="Screenshot 2026-07-14 131351" src="https://github.com/user-attachments/assets/93832e96-44b3-4346-882e-a3839a451a36" />
 
 
 **Phân tích & Insight:** Phân rã doanh thu theo Kênh (Channel) và Phân khúc Khách hàng (Customer Segment). Giúp phát hiện nhanh tình trạng nếu Công suất phòng (Occupancy) rất cao nhưng RevPAR lại thấp, báo hiệu rằng khách sạn đang bán phòng với giá quá rẻ.
 
-### 📈 8.2. Dashboard Phân tích Lợi nhuận (Profitability Management)
+### 📈 7.2. Dashboard Phân tích Lợi nhuận 
 <!-- 📸 THÊM ẢNH PROFITABILITY DASHBOARD VÀO DÒNG BÊN DƯỚI -->
 <img width="1155" height="695" alt="Screenshot 2026-07-14 131456" src="https://github.com/user-attachments/assets/6d2ae9ed-bd4d-44e5-950a-6fe282fc04ee" />
 
 
 **Phân tích & Insight:** Trực quan hóa dòng chảy (Waterfall) từ Doanh thu gộp đến Lợi nhuận ròng. Trả lời câu hỏi sống còn: *"Liệu các chương trình voucher và tiền hoa hồng OTA có đang "ăn" hết lợi nhuận của chúng ta không?"* Dashboard giúp xác định chính xác ProfitPAR thực tế mang lại từ từng nguồn đặt phòng.
 
-### 🕵️ 8.3. Dashboard Tình báo Thị trường (Market Intelligence)
+### 🕵️ 7.3. Dashboard Tình báo Thị trường (Market Intelligence)
 <!-- 📸 THÊM ẢNH MARKET INTELLIGENCE DASHBOARD VÀO DÒNG BÊN DƯỚI -->
 <img width="1155" height="691" alt="Screenshot 2026-07-14 131429" src="https://github.com/user-attachments/assets/ebb83a32-5540-43a5-bc75-d07e4b55f19d" />
 
 
 **Phân tích & Insight:** So sánh ADR (Giá bán bình quân) của HAIAN với giá trung bình của thị trường xung quanh. Hệ thống trực quan hóa cảnh báo ngay lập tức khi đối thủ giảm giá mạnh hoặc hết phòng (Sold-out). Từ đó, khách sạn có thể áp dụng chiến lược **Định giá Động (Dynamic Pricing)** một cách linh hoạt.
 
+### 
 ---
 
-## 🎯 9. Đề xuất Kinh doanh (Actionable Insights)
+## 🎯 8. Đề xuất Kinh doanh (Actionable Insights)
 Dựa trên dữ liệu được thu thập và phân tích từ hệ thống Dashboard, dưới đây là các đề xuất chiến lược dựa trên dữ liệu (Data-driven) nhằm khôi phục ProfitPAR về mức mục tiêu 850.000 VNĐ:
 
 1. **Áp dụng Định giá Động (Dynamic Pricing) theo Chỉ số Cạnh tranh:** Dữ liệu cho thấy khi các đối thủ cùng phân khúc đạt tỷ lệ lấp đầy (Sold-out rate) **> 85%** trên Booking.com, hệ thống của HAIAN vẫn đang giữ nguyên mức giá cố định. Khuyến nghị: Thiết lập quy tắc tự động tăng ADR lên **5% - 10%** ngay khi nguồn cung thị trường xung quanh khan hiếm. Thao tác này ước tính có thể cải thiện RevPAR thêm **8%** trong các dịp lễ.
@@ -218,7 +123,7 @@ Dựa trên dữ liệu được thu thập và phân tích từ hệ thống Da
 
 ---
 
-## 🎓 10. Mình đã học được gì qua dự án ? 
+## 🎓 9. Mình đã học được gì qua dự án ? 
 Thông qua việc tự tay xây dựng dự án Data Warehouse toàn diện này, tôi đã đúc kết được những kinh nghiệm vô giá không chỉ về mặt công cụ mà còn về tư duy giải quyết vấn đề:
 
 * **Quản trị Pipeline với Apache Airflow:** Hiểu sâu về cách điều phối (Orchestration), lên lịch trình (DAGs) và giám sát trạng thái của các luồng dữ liệu (ETL pipeline). Điều này giúp tôi nhận ra tầm quan trọng của việc tự động hóa và khả năng theo dõi luồng dữ liệu một cách trực quan thay vì chạy script thủ công.
