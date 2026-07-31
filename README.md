@@ -168,12 +168,114 @@ Dashboard đánh giá khả năng sinh lời, xu hướng chi phí và cơ cấu
 - Công suất và mức giá tốt trong tháng 7 đã giúp lợi nhuận tăng mạnh dù tổng chi phí cũng cao hơn.
 
 ## 🎯 8. Đề xuất Kinh doanh (Actionable Insights)
-Dựa trên dữ liệu được thu thập và phân tích từ hệ thống Dashboard, dưới đây là các đề xuất chiến lược dựa trên dữ liệu (Data-driven) nhằm khôi phục ProfitPAR về mức mục tiêu 850.000 VNĐ:
+Các chiến lược dưới đây được đề xuất dựa trên insight từ bốn dashboard. Do dữ liệu nội bộ HAIAN là dữ liệu mô phỏng, các đề xuất được xem là định hướng thử nghiệm và cần được kiểm chứng bằng dữ liệu vận hành thực tế trước khi áp dụng.
 
-1. **Áp dụng Định giá Động (Dynamic Pricing) theo Chỉ số Cạnh tranh:** Dữ liệu cho thấy khi các đối thủ cùng phân khúc đạt tỷ lệ lấp đầy (Sold-out rate) **> 85%** trên Booking.com, hệ thống của HAIAN vẫn đang giữ nguyên mức giá cố định. Khuyến nghị: Thiết lập quy tắc tự động tăng ADR lên **5% - 10%** ngay khi nguồn cung thị trường xung quanh khan hiếm. Thao tác này ước tính có thể cải thiện RevPAR thêm **8%** trong các dịp lễ.
-2. **Tối ưu hóa Kênh Phân phối để Giảm chi phí OTA:** Dashboard Lợi nhuận chỉ ra rằng dù OTA chiếm **65% tổng doanh thu**, nhưng chi phí hoa hồng (15-20%) đã bào mòn đáng kể lợi nhuận ròng. Ngược lại, kênh Direct Booking (đặt trực tiếp) có biên lợi nhuận cao hơn **18%**. Khuyến nghị: Dịch chuyển 15% ngân sách từ các chiến dịch giảm giá trên OTA sang các chiến dịch Marketing nội bộ để thúc đẩy Direct Booking đối với nhóm khách hàng FIT (Khách lẻ).
-3. **Đánh giá lại Chiến lược Phát hành Voucher:** Việc giảm giá ồ ạt qua Voucher trong tháng 7 khiến ADR giảm sâu nhưng Occupancy (Công suất phòng) chỉ tăng nhẹ **2.5%**, dẫn đến ProfitPAR sụt giảm nghiêm trọng. Khuyến nghị: Dừng việc phát hành voucher giảm giá đại trà. Chuyển sang chiến lược Upselling (nâng hạng phòng) hoặc áp dụng điều kiện "Lưu trú tối thiểu 3 đêm" để tối đa hóa lợi nhuận trên mỗi khách hàng.
+---
 
+### 8.1. Điều chỉnh giá theo mức cầu
+
+Kết quả phân tích cho thấy tháng 7 có tỷ lệ lấp đầy, giá phòng trung bình và biên lợi nhuận cao nhất. Trong những giai đoạn có mức cầu tương tự, HAIAN nên:
+
+- Hạn chế giảm giá đại trà.
+- Ưu tiên bán phòng theo giá tiêu chuẩn hoặc cung cấp gói giá trị gia tăng.
+- Áp dụng điều kiện lưu trú tối thiểu trong những ngày có nhu cầu cao.
+- Theo dõi đồng thời tỷ lệ lấp đầy, ADR và ProfitPAR trước khi điều chỉnh giá.
+
+Đối với các ngày có hiệu quả thấp như 02/06, 03/06, 09/06, 19/08 và 26/08, khách sạn có thể triển khai ưu đãi có mục tiêu như đặt sớm, lưu trú nhiều đêm hoặc gói phòng kèm ăn sáng. Không nên giảm giá cho toàn bộ giai đoạn vì có thể làm giảm lợi nhuận ở những ngày đã có nhu cầu tốt.
+
+---
+
+### 8.2. Tập trung vào loại phòng có đóng góp cao
+
+Beachfront Oasis là loại phòng tạo ra lợi nhuận đóng góp cao nhất. Vì vậy, HAIAN nên:
+
+- Duy trì định vị cao cấp cho loại phòng này.
+- Xây dựng các gói phòng hướng biển kết hợp với spa, ăn sáng hoặc đưa đón.
+- Ưu tiên giới thiệu Beachfront Oasis trong hoạt động truyền thông.
+- Triển khai chương trình bán nâng hạng từ các loại phòng thấp hơn.
+- Hạn chế áp dụng giảm giá sâu trong những ngày có nhu cầu cao.
+
+Partial Sea View Oasis có doanh thu gần tương đương Beachfront Oasis nhưng lợi nhuận đóng góp thấp hơn. Khách sạn cần kiểm tra mức giảm giá, chi phí phục vụ và tỷ lệ hoa hồng của loại phòng này trước khi tiếp tục mở rộng doanh số.
+
+---
+
+### 8.3. Phát triển phân khúc khách hàng chủ lực
+
+Nhóm khách nội địa đi nghỉ dưỡng và lưu trú từ 2–3 đêm là phân khúc đóng góp lớn nhất vào doanh thu và lợi nhuận. HAIAN có thể:
+
+- Xây dựng gói nghỉ dưỡng cuối tuần 2 đêm hoặc 3 ngày 2 đêm.
+- Kết hợp phòng với ăn sáng, spa hoặc dịch vụ đưa đón.
+- Áp dụng chương trình ưu đãi cho khách quay lại.
+- Cá nhân hóa nội dung truyền thông cho cặp đôi, gia đình và nhóm bạn.
+- Khuyến khích khách kéo dài thời gian lưu trú bằng ưu đãi theo số đêm.
+
+Đối với khách quốc tế, khách sạn có thể phát triển các gói lưu trú dài ngày, dịch vụ đưa đón và thông tin du lịch địa phương. Phân khúc khách đoàn và MICE có thể được khai thác vào những ngày công suất thấp nhằm bổ sung nhu cầu.
+
+---
+
+### 8.4. Tối ưu cơ cấu kênh bán
+
+Agoda và Booking.com tạo ra sản lượng và doanh thu lớn nhưng có biên đóng góp thấp hơn website khách sạn và đại lý du lịch địa phương. HAIAN không nên loại bỏ các nền tảng OTA mà cần xác định vai trò phù hợp của từng kênh:
+
+- Sử dụng OTA để tiếp cận khách hàng mới và duy trì sản lượng.
+- Khuyến khích khách quay lại đặt phòng qua website hoặc kênh trực tiếp.
+- Cung cấp quyền lợi riêng cho kênh trực tiếp như nhận phòng sớm, trả phòng muộn hoặc nâng hạng tùy tình trạng.
+- Đánh giá kênh bán dựa trên lợi nhuận sau hoa hồng, không chỉ dựa trên doanh thu.
+- Kiểm soát mức giảm giá, hoa hồng và chi phí khuyến mãi trên từng nền tảng.
+- Theo dõi tỷ lệ chuyển đổi từ khách OTA thành khách hàng trực tiếp.
+
+Cách tiếp cận này phù hợp với nguyên tắc quản trị doanh thu theo kênh, trong đó hiệu quả phân phối cần được đánh giá dựa trên phần đóng góp sau chi phí thay vì chỉ nhìn vào doanh thu phòng.
+
+---
+
+### 8.5. Kiểm soát các nhóm chi phí lớn
+
+Kết quả dashboard cho thấy điện, lao động buồng phòng và chi phí kỹ thuật là những khoản chi lớn nhất. HAIAN nên:
+
+- Theo dõi điện năng theo phòng khả dụng và phòng đã bán.
+- Điều chỉnh lịch làm việc của bộ phận buồng phòng theo công suất dự kiến.
+- Xây dựng định mức vật tư vệ sinh, đồ dùng phòng và giặt là.
+- Lập kế hoạch bảo trì phòng ngừa để hạn chế sửa chữa đột xuất.
+- Theo dõi chi phí bữa sáng trên mỗi khách lưu trú.
+- So sánh chi phí thực tế với ngân sách theo tháng.
+- Thiết lập cảnh báo khi chi phí vượt ngưỡng kiểm soát.
+
+Tháng 7 có tổng chi phí cao nhưng biên lợi nhuận vẫn tốt nhất. Điều này cho thấy mục tiêu không phải cắt giảm toàn bộ chi phí mà là kiểm soát chi phí trong mối quan hệ với doanh thu, công suất và chất lượng dịch vụ.
+
+---
+
+### 8.6. Sử dụng giá đối thủ như tín hiệu thị trường
+
+Dữ liệu đối thủ có thể hỗ trợ nhận diện mặt bằng giá và tín hiệu hết phòng. Tuy nhiên, dữ liệu HAIAN năm 2025 và dữ liệu đối thủ năm 2026 không cùng thời kỳ nên không được so sánh trực tiếp theo ngày.
+
+Để sử dụng dữ liệu đối thủ hiệu quả hơn, HAIAN nên:
+
+- Xây dựng tập đối thủ tương đồng về hạng sao, vị trí và loại hình lưu trú.
+- Chỉ so sánh những loại phòng có đặc điểm tương đương.
+- Thu thập dữ liệu HAIAN và đối thủ trong cùng thời kỳ.
+- Theo dõi giá trung vị thay vì chỉ sử dụng giá trung bình.
+- Phân biệt trạng thái hết phòng với trường hợp không thu thập được dữ liệu.
+- Kết hợp giá đối thủ với công suất nội bộ, tốc độ đặt phòng và chi phí.
+- Theo dõi biến động giá theo ngày nhận phòng và thời điểm thu thập.
+
+Trong phạm vi hiện tại, dashboard đối thủ chỉ cung cấp **tín hiệu tham khảo về thị trường**, chưa thể xác định mức giá tối ưu cho HAIAN.
+
+---
+
+### 8.7. Chuyển từ quản lý doanh thu sang quản lý lợi nhuận
+
+Các quyết định kinh doanh không nên chỉ dựa trên doanh thu hoặc tỷ lệ lấp đầy. HAIAN cần theo dõi đồng thời:
+
+- Giá phòng trung bình.
+- Tỷ lệ lấp đầy.
+- Doanh thu trên mỗi phòng khả dụng.
+- Lợi nhuận trên mỗi phòng khả dụng.
+- Biên lợi nhuận đóng góp.
+- Chi phí phân phối theo kênh.
+- Chi phí trên mỗi phòng đã bán.
+- Giá trị đóng góp của từng loại phòng và phân khúc khách hàng.
+
+Cách tiếp cận này giúp hạn chế trường hợp doanh thu tăng nhưng lợi nhuận giảm do hoa hồng, khuyến mãi hoặc chi phí vận hành tăng. Mục tiêu cuối cùng là tối ưu lợi nhuận và giá trị khách hàng thay vì chỉ tối đa hóa số lượng phòng bán.
 ---
 
 ## 🎓 9. Mình đã học được gì qua dự án ? 
