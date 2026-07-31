@@ -276,6 +276,7 @@ Các quyết định kinh doanh không nên chỉ dựa trên doanh thu hoặc t
 - Giá trị đóng góp của từng loại phòng và phân khúc khách hàng.
 
 Cách tiếp cận này giúp hạn chế trường hợp doanh thu tăng nhưng lợi nhuận giảm do hoa hồng, khuyến mãi hoặc chi phí vận hành tăng. Mục tiêu cuối cùng là tối ưu lợi nhuận và giá trị khách hàng thay vì chỉ tối đa hóa số lượng phòng bán.
+
 ---
 
 ## 🎓 9. Mình đã học được gì qua dự án ? 
