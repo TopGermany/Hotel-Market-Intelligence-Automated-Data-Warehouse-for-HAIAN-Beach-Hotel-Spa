@@ -100,7 +100,7 @@ Các cơ chế kỹ thuật chính:
 - GitHub Actions kiểm tra compile, Ruff, pytest/coverage, Docker Compose và image build.
 
 
-## 📊 7. Hệ thống Dashboard Phân tích (Looker Studio)
+## 📊 7. Hệ thống Dashboard Phân tích 
 
 
 
@@ -181,7 +181,7 @@ Dashboard đánh giá khả năng sinh lời, xu hướng chi phí và cơ cấu
 - Theo phòng ban, bộ phận buồng phòng có chi phí cao nhất, khoảng **8,13 tỷ đồng**, tiếp theo là bộ phận kỹ thuật với khoảng **6,90 tỷ đồng**.
 - Công suất và mức giá tốt trong tháng 7 đã giúp lợi nhuận tăng mạnh dù tổng chi phí cũng cao hơn.
 
-## 🎯 8. Đề xuất Kinh doanh (Actionable Insights)
+## 🎯 8. Đề xuất Kinh doanh 
 Các chiến lược dưới đây được đề xuất dựa trên insight từ bốn dashboard. Do dữ liệu nội bộ HAIAN là dữ liệu mô phỏng, các đề xuất được xem là định hướng thử nghiệm và cần được kiểm chứng bằng dữ liệu vận hành thực tế trước khi áp dụng.
 
 ---
