@@ -1,4 +1,4 @@
-# 🏨 Phân tích Thị trường Khách sạn & Hệ thống Kho Dữ liệu Tự động hóa tại HAIAN Beach Hotel & Spa
+# 🏨 Phân tích thị trường Khách sạn & Xây dựng hệ thống kho dữ liệu tự động hóa tại HAIAN Beach Hotel & Spa
 
 ![Data Engineering & Analytics Architecture](https://img.shields.io/badge/Architecture-Medallion-blue)
 ![Tech Stack](https://img.shields.io/badge/Stack-Python%20%7C%20Airflow%20%7C%20BigQuery-success)
